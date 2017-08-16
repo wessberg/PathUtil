@@ -1,4 +1,7 @@
 export interface IPathUtil {
+	takeExtension (path: string): string;
+	takeDirectory (path: string): string;
+	takeFilename (path: string): string;
 	hasExtension (path: string): boolean;
 	clearExtension (path: string): string;
 	appendBeforeExtension (path: string, append: string): string;

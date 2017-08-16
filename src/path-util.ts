@@ -7,6 +7,33 @@ import {basename, dirname, extname, isAbsolute, join, relative} from "path";
 export class PathUtil implements IPathUtil {
 
 	/**
+	 * Returns the extension of a string
+	 * @param {string} path
+	 * @returns {string}
+	 */
+	public takeExtension (path: string): string {
+		return extname(path);
+	}
+
+	/**
+	 * Returns the directory of a string
+	 * @param {string} path
+	 * @returns {string}
+	 */
+	public takeDirectory (path: string): string {
+		return dirname(path);
+	}
+
+	/**
+	 * Returns the file name of a string
+	 * @param {string} path
+	 * @returns {string}
+	 */
+	public takeFilename (path: string): string {
+		return basename(path);
+	}
+
+	/**
 	 * Generates a relative path from the provided 'basePath' path to the provided 'to' path.
 	 * @param {string} basePath
 	 * @param {string} to
