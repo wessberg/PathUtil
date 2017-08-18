@@ -1,3 +1,12 @@
+<a name="0.0.3"></a>
+## 0.0.3 (2017-08-18)
+
+* 0.0.3 ([7fb891e](https://github.com/wessberg/pathutil/commit/7fb891e))
+* Added a dependency on FileLoader ([70c4a4d](https://github.com/wessberg/pathutil/commit/70c4a4d))
+* Bumped version ([850f0d5](https://github.com/wessberg/pathutil/commit/850f0d5))
+
+
+
 <a name="0.0.2"></a>
 ## 0.0.2 (2017-08-16)
 
