@@ -1,9 +1,10 @@
 import {test} from "ava";
 import {IPathUtil} from "../src/i-path-util";
 import {PathUtil} from "../src/path-util";
+import {FileLoader} from "@wessberg/fileloader";
 
 let pathUtil: IPathUtil;
-test.beforeEach(() => pathUtil = new PathUtil());
+test.beforeEach(() => pathUtil = new PathUtil(new FileLoader()));
 
 test("Correctly calculates relative paths. #1", t => {
 	const basePath = "./foo/bar.ts";

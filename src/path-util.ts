@@ -1,10 +1,13 @@
 import {IPathUtil} from "./i-path-util";
 import {basename, dirname, extname, isAbsolute, join, relative} from "path";
+import {IFileLoader} from "@wessberg/fileloader";
 
 /**
  * A class that helps with working with paths
  */
 export class PathUtil implements IPathUtil {
+
+	constructor (private fileLoader: IFileLoader) {}
 
 	/**
 	 * Returns the extension of a string
@@ -61,7 +64,14 @@ export class PathUtil implements IPathUtil {
 		// If the provided path is a lib, return that path.
 		if (nodeResolution && this.isLib(relativePath)) return relativePath;
 		if (isAbsolute(relativePath)) return relativePath;
-		return join(from, relativePath);
+
+		// If it is a directory (or the path doesn't exist), simply join the two paths
+		if (!this.fileLoader.existsSync(relativePath) || this.fileLoader.isDirectorySync(relativePath)) {
+			return join(from, relativePath);
+		} else {
+			// Otherwise, go a directory up.
+			return join(from, "../", relativePath);
+		}
 	}
 
 	/**
