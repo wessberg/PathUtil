@@ -1,6 +1,6 @@
 {
 	"name": "@wessberg/pathutil",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"description": "A helper class for working with paths",
 	"scripts": {
 		"test": "NODE_ENV=TEST ava --fail-fast",
