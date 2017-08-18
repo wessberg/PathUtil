@@ -66,7 +66,7 @@ export class PathUtil implements IPathUtil {
 		if (isAbsolute(relativePath)) return relativePath;
 
 		// If it is a directory (or the path doesn't exist), simply join the two paths
-		if (!this.fileLoader.existsSync(relativePath) || this.fileLoader.isDirectorySync(relativePath)) {
+		if (!this.fileLoader.existsSync(from) || this.fileLoader.isDirectorySync(from)) {
 			return join(from, relativePath);
 		} else {
 			// Otherwise, go a directory up.
