@@ -1,3 +1,12 @@
+<a name="0.0.4"></a>
+## 0.0.4 (2017-08-18)
+
+* 0.0.4 ([d047583](https://github.com/wessberg/pathutil/commit/d047583))
+* Bumped version ([36e99c0](https://github.com/wessberg/pathutil/commit/36e99c0))
+* Fixed a bug ([a64a31b](https://github.com/wessberg/pathutil/commit/a64a31b))
+
+
+
 <a name="0.0.3"></a>
 ## 0.0.3 (2017-08-18)
 
