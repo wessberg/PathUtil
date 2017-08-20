@@ -1,3 +1,12 @@
+<a name="0.0.5"></a>
+## 0.0.5 (2017-08-20)
+
+* 0.0.5 ([31c6d49](https://github.com/wessberg/pathutil/commit/31c6d49))
+* Bumped dependency on Typescript ([d626957](https://github.com/wessberg/pathutil/commit/d626957))
+* Bumped version ([5aeedac](https://github.com/wessberg/pathutil/commit/5aeedac))
+
+
+
 <a name="0.0.4"></a>
 ## 0.0.4 (2017-08-18)
 
