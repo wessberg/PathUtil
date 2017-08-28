@@ -6,6 +6,11 @@ import {IFileLoader} from "@wessberg/fileloader";
  * A class that helps with working with paths
  */
 export class PathUtil implements IPathUtil {
+	/**
+	 * The possible extensions when working with resolving paths for scripts
+	 * @type {string[]}
+	 */
+	private static readonly POSSIBLE_EXTENSIONS: string[] = [".ts", ".tsx", ".js", ".json", ".d.ts"];
 
 	constructor (private fileLoader: IFileLoader) {}
 
@@ -66,7 +71,7 @@ export class PathUtil implements IPathUtil {
 		if (isAbsolute(relativePath)) return relativePath;
 
 		// If it is a directory (or the path doesn't exist), simply join the two paths
-		if (!this.fileLoader.existsSync(from) || this.fileLoader.isDirectorySync(from)) {
+		if (!this.fileLoader.existsWithFirstMatchedExtensionSync(this.clearExtension(from), PathUtil.POSSIBLE_EXTENSIONS) || this.fileLoader.isDirectorySync(from)) {
 			return join(from, relativePath);
 		} else {
 			// Otherwise, go a directory up.
