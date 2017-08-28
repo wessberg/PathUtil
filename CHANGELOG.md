@@ -1,3 +1,12 @@
+<a name="0.0.6"></a>
+## 0.0.6 (2017-08-28)
+
+* 0.0.6 ([7fed4c2](https://github.com/wessberg/pathutil/commit/7fed4c2))
+* Bumped version ([eee5155](https://github.com/wessberg/pathutil/commit/eee5155))
+* Fixed a bug ([099eca6](https://github.com/wessberg/pathutil/commit/099eca6))
+
+
+
 <a name="0.0.5"></a>
 ## 0.0.5 (2017-08-20)
 
