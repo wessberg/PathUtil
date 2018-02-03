@@ -12,7 +12,7 @@ export class PathUtil implements IPathUtil {
 	 */
 	private static readonly POSSIBLE_EXTENSIONS: string[] = [".ts", ".tsx", ".js", ".json", ".d.ts"];
 
-	constructor (private fileLoader: IFileLoader) {}
+	constructor (private readonly fileLoader: IFileLoader) {}
 
 	/**
 	 * Returns the extension of a string
