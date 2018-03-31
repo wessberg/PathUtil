@@ -1,11 +1,11 @@
-import {IPathUtil} from "./i-path-util";
+import {IPathUtilHost} from "./i-path-util-host";
 import {basename, dirname, extname, isAbsolute, join, relative} from "path";
 import {IFileLoader} from "@wessberg/fileloader";
 
 /**
  * A class that helps with working with paths
  */
-export class PathUtil implements IPathUtil {
+export class PathUtilHost implements IPathUtilHost {
 	/**
 	 * The possible extensions when working with resolving paths for scripts
 	 * @type {string[]}
@@ -71,7 +71,7 @@ export class PathUtil implements IPathUtil {
 		if (isAbsolute(relativePath)) return relativePath;
 
 		// If it is a directory (or the path doesn't exist), simply join the two paths
-		if (!this.fileLoader.existsWithFirstMatchedExtensionSync(this.clearExtension(from), PathUtil.POSSIBLE_EXTENSIONS)[0] || this.fileLoader.isDirectorySync(from)) {
+		if (this.fileLoader.getWithFirstMatchedExtensionSync(this.clearExtension(from), PathUtilHost.POSSIBLE_EXTENSIONS) == null || this.fileLoader.isDirectorySync(from)) {
 			return join(from, relativePath);
 		} else {
 			// Otherwise, go a directory up.

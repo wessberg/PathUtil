@@ -1,2 +1,4 @@
-export {PathUtil} from "./path-util";
-export {IPathUtil} from "./i-path-util";
+import "./services";
+
+export {IPathUtil} from "./path-util/i-path-util";
+export {PathUtil} from "./path-util/path-util";

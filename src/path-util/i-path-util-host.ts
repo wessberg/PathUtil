@@ -1,4 +1,4 @@
-export interface IPathUtil {
+export interface IPathUtilHost {
 	takeExtension (path: string): string;
 	takeDirectory (path: string): string;
 	takeFilename (path: string): string;

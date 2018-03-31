@@ -1,10 +1,10 @@
+import "../src/services";
 import {test} from "ava";
-import {IPathUtil} from "../src/i-path-util";
-import {PathUtil} from "../src/path-util";
-import {FileLoader} from "@wessberg/fileloader";
+import {IPathUtil} from "../src/path-util/i-path-util";
+import {PathUtil} from "../src/path-util/path-util";
 
 let pathUtil: IPathUtil;
-test.beforeEach(() => pathUtil = new PathUtil(new FileLoader()));
+test.beforeEach(() => pathUtil = new PathUtil());
 
 test("Correctly calculates relative paths. #1", t => {
 	const basePath = "./foo/bar.ts";
