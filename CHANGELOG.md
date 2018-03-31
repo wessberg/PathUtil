@@ -1,3 +1,12 @@
+<a name="0.0.10"></a>
+## <small>0.0.10 (2018-03-31)</small>
+
+* 0.0.10 ([74b58b9](https://github.com/wessberg/pathutil/commit/74b58b9))
+* Bumped deps ([8a601d8](https://github.com/wessberg/pathutil/commit/8a601d8))
+* Bumped version ([24d72e4](https://github.com/wessberg/pathutil/commit/24d72e4))
+
+
+
 <a name="0.0.9"></a>
 ## <small>0.0.9 (2018-03-31)</small>
 
