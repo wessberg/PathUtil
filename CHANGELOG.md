@@ -1,3 +1,12 @@
+<a name="0.0.9"></a>
+## <small>0.0.9 (2018-03-31)</small>
+
+* 0.0.9 ([daacf45](https://github.com/wessberg/pathutil/commit/daacf45))
+* Bumped deps. Made it possible to construct a new PathUtil without dependency injection ([d881309](https://github.com/wessberg/pathutil/commit/d881309))
+* Bumped version ([2786195](https://github.com/wessberg/pathutil/commit/2786195))
+
+
+
 <a name="0.0.8"></a>
 ## <small>0.0.8 (2018-02-03)</small>
 
